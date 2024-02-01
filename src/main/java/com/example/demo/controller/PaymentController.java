@@ -53,7 +53,7 @@ public class PaymentController {
 			RazorpayClient razorpay=new RazorpayClient("rzp_live_Ux8QCSnCS2qRjN", "NgeSPNYHJh9ExycB3OzWYuEQ");
 
 			JSONObject orderRequest = new JSONObject();
-			orderRequest.put("amount", amount*100); // amount in the smallest currency unit
+			orderRequest.put("amount", amount*100); 
 			orderRequest.put("currency", "INR");
 			orderRequest.put("receipt", "order_rcptid_11");
 
@@ -73,12 +73,12 @@ public class PaymentController {
 	@ResponseBody
 	public boolean verifyPayment(@RequestParam  String orderId, @RequestParam String paymentId, @RequestParam String signature) {
 	    try {
-	        // Initialize Razorpay client with your API key and secret
+	        
 	        RazorpayClient razorpayClient = new RazorpayClient("rzp_live_Ux8QCSnCS2qRjN", "NgeSPNYHJh9ExycB3OzWYuEQ");
-	        // Create a signature verification data string
+	        
 	        String verificationData = orderId + "|" + paymentId;
 
-	        // Use Razorpay's utility function to verify the signature
+	      
 	        boolean isValidSignature = Utils.verifySignature(verificationData, signature, "NgeSPNYHJh9ExycB3OzWYuEQ");
 
 	        return isValidSignature;
