@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2; /* Background color for the page */
+               margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+        }
+
+        form {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff; /* Form background color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color:  #0093AF; 
+            color: white; /* Text color for the submit button */
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1560bd ;/* Darker green background color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <form action="addSong" method="post">
+    <h1>Create the PlayList</h1>
+        <label><b>Song Name :</b> </label>
+        <input type="text" name="name" required/>
+        <br />
+
+        <label><b>Song Artist : </b></label>
+        <input type="text" name="artist" required/>
+        <br />
+
+        <label><b>Song Genre :</b> </label>
+        <input type="text" name="genre" required/>
+        <br />
+
+        <label> <b>Song Link : </b></label>
+        <input type="text" name="link" required/>
+        <br />
+
+        <input type="submit" value="ADD SONG"/>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style>
+body {
+            text-align:  left;
+               margin: 0;
+    padding: 0; 
+    background-image: url('https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg'); /* Replace with the path to your image */
+    background-size: cover; 
+    background-position:  left; 
+    background-repeat: no-repeat; 
+        justify-content: center ;
+        
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            margin: 0;
+      font-family: Arial, sans-serif;
+      color:  #ffffff;
+      width:  100%;
+        }
+          button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #008080; 
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        button a {
+            color: white; 
+            text-decoration: none;
+        }
+
+        button:hover 
+        {
+            background-color:  #1560bd; 
+        }
+        
+        .a{
+       justify-content: center;
+    display: flex;
+        }
+        
+        </style>
+</head>
+<body>
+<br><br><br><br><br><br>
+<div class="a">
+<form action="addPlaylist" method="post">
+
+<h1>Create PlayList</h1>
+			<label>Playlist name: </label>
+			<input type="text" name = "name" />
+			
+			<br><br><br><br>
+			
+			<div th:each="song:${songs}">
+				<input type="checkbox" th:name="songs" th:value="${song.id}"/>
+				<label th:text="${song.name}"></label><br><br><br>
+			</div>
+			
+			<button type="button"><input type="submit" value="ADD PLAYLIST" /></button>
+		</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+     margin: 0;
+                padding: 0; 
+            background-color: #f2f2f2; 
+          background-image: url('https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg'); /* Replace with the path to your image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    }
+
+    form {
+    
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+     
+      margin-bottom: 4px;
+      color: #555;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color:   #0093AF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="register" method="post">
+ <br><br>
+    <h1>User Registration</h1>
+   <b><label>User name:</label></b>
+    <input type="text" name="username" required>
+<br>
+   <b> <label>Email:</label></b>
+    <input type="email" name="email" required>
+<br>
+   <b> <label>Password:</label></b>
+    <input type="password" name="password" required>
+<br>
+   <b> <label>Gender:</label></b>
+    <br>
+   <b> <label>Male<input type="radio" name="gender" value="male"></label></b>
+    <b><label>Female<input type="radio" name="gender" value="female"></label></b>
+    <b><label>Others<input type="radio" name="gender" value="other"></label></b>
+<br>
+  <b>  <label>Role:</label></b><br>
+   <b> <label>Admin<input type="radio" name="role" value="admin"></label></b>
+   <b> <label>Customer<input type="radio" name="role" value="customer"></label></b>
+<br>
+   <b> <label>Address:</label></b>
+    <textarea name="address"></textarea>
+
+    <input type="submit">
+  </form>
+
+</body>
+</html>

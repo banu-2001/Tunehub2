@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+        body {
+          
+      font-family: Arial, sans-serif;
+      margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    color: #ffffff; 
+     height: 100vh;
+    }
+       
+       
+       table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+ td{
+ height: 40px;
+ text-align:center;
+ verticle-align: middle;
+ }  
+       
+
+        th {
+             background-color:#000000;
+        }
+    
+    </style>
+    
+</head>
+<body>
+
+<center>
+<br><br><br><br><br><br><br>
+
+<table style="width:100%">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Artist</th>
+				<th>Genre</th>
+				<th>Play</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="song:${songs}">
+				<td th:text="${song.name}">			</td>
+				<td th:text="${song.artist}">		</td>
+				<td th:text="${song.genre}">		</td>
+				<td >
+					<audio controls>
+        				<source th:src="${song.link}" type="audio/mpeg">
+    				</audio>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+</center>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

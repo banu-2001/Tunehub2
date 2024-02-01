@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	iframe{
+		height:200px;
+		width:700px;
+	}
+	 
+        body {
+               text-align:  left;
+               margin: 0;
+    padding: 0; 
+    background-image: url('https://img.freepik.com/free-vector/glowing-musical-pentagram-background-with-sound-notes_1017-31220.jpg'); /* Replace with the path to your image */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+        justify-content:  center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            margin: 0;
+      font-family: Arial, sans-serif;
+      color:  #ffffff;
+       align-items: center;
+             column-gap: 10px;
+             display: flex;
+            
+        }
+
+        table  {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto; 
+            
+        }
+
+        th, td  {
+            padding: 12px;
+            border: 1px solid #ddd;
+            
+        }
+
+        th   {
+            color: #ffffff ;
+        }
+        
+        table  td > ul > li {
+        
+            display: flex;
+    align-items: center;
+    gap: 10px;
+        }
+
+              table  td > ul  {
+        
+              row-gap: 10px;
+    display: flex;
+    flex-direction: column;}
+  
+        table  td > ul > li > span {
+
+    width: 140px;
+        }
+      
+    </style>
+</style>
+</head>
+<body>
+
+<table border>
+
+<h1>PLAYLIST</h1>
+		<thead>
+			<tr>
+				<th>PlayList </th>
+				<th>Song Name</th>
+			
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="plist:${allPlaylists}">
+				<td th:text="${plist.name}"> </td>
+				<td >
+					<ul>
+						<li th:each="song : ${plist.songs}" >
+							<span th:text="${song.name}"></span>
+							<audio controls>
+		        				<source th:src="${song.link}" type="audio/mpeg">
+		    				</audio>
+		    				<br><br>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
